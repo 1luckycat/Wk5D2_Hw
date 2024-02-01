@@ -1,3 +1,4 @@
+
 --Week5 Day2 Homework
 
 -- Thank you so much for your help Alex!  I was able to understand this alot better now!  Still iffy on some parts, but 
@@ -53,10 +54,9 @@ limit 1;
 --8.  From store_id 1, how many customers have a last name ending with 'es'? (use customer table)
 select store_id, count(last_name)
 from customer
-where last_name like'%es'
+where last_name like'%es' and store_id = 1
 group by store_id
-order by count(last_name) desc
-limit 1;
+order by count(last_name);
 
 
 --9.  How many payment amounts (4.99, 5.99, etc.) had a number of rentals above 250 for customers with
